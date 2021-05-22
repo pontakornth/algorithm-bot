@@ -2,7 +2,7 @@ from collections import namedtuple
 from PIL import Image, ImageDraw
 from typing import List
 
-DrawSpec = namedtuple("DrawSpec", "values colored_indexes color")
+SortingSpec = namedtuple("DrawSpec", "values colored_indexes color")
 
 
 def get_new_image():
@@ -14,7 +14,7 @@ def get_new_image():
     return canvas, image_draw
 
 
-def draw_bar(spec: DrawSpec):
+def draw_sorting_bar(spec: SortingSpec):
     """
     Draw bar of graph according to the spec.
     Arg:
@@ -35,9 +35,9 @@ def draw_bar(spec: DrawSpec):
     return canvas
 
 
-def draw_queue(queue: List[DrawSpec]):
+def draw_queue(queue: List[SortingSpec]):
     image_sequence = []
     for spec in queue:
-        image_sequence.append(draw_bar(spec))
+        image_sequence.append(draw_sorting_bar(spec))
     return image_sequence
 
