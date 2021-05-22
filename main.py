@@ -7,6 +7,7 @@ import algorithms
 import algorithms.bubble_sort
 import algorithms.selection_sort
 import algorithms.insertion_sort
+import algorithms.merge_sort
 import algorithms.utils
 
 import io
@@ -23,7 +24,8 @@ bot = commands.Bot(command_prefix="$")
 algorithms_map = {
     "bubble": algorithms.bubble_sort.sort,
     "selection": algorithms.selection_sort.sort,
-    "insertion": algorithms.insertion_sort.sort
+    "insertion": algorithms.insertion_sort.sort,
+    "merge": algorithms.merge_sort.sort
 }
 
 
